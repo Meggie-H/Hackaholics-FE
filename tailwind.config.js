@@ -47,6 +47,8 @@ module.exports = {
       success: "#356823",
       "bg-information": "#83CBC4",
       information: "#328589",
+      offwhite: "#F6F6F4",
+      white: "#FFFFFF",
     },
   },
   plugins: [require("daisyui")],
