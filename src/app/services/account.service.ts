@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
-import { IAccountBalanceResponse, ITransactionsResponse } from '../models/api-types';
+import { IAccountBalanceResponse, IBeneficiariesDTO, ITransactionsResponse } from '../models/api-types';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +17,9 @@ export class AccountService {
 
   getTransactions(accountId : string) : Observable<ITransactionsResponse> {
     return this.http.get(`${this.baseUrl}/${accountId}/transactions?${this.dateRangeQueryParam}`, {headers : {"host" : environment.host} }) as Observable<ITransactionsResponse>;
+  }
+
+  getBeneficiary() : Observable<IBeneficiariesDTO> {
+    return this.http.get(`${this.baseUrl}/beneficiaries`) as Observable<IBeneficiariesDTO>;
   }
 }
