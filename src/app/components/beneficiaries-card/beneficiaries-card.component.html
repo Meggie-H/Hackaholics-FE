@@ -2,9 +2,13 @@
     <div class="card-body flex flex-row items-center h-24">
         <div class="avatar placeholder mr-2">
             @if (beneficiaryInfo.bank == 'CAPITEC') {
-                <div class="bg-neutral text-neutral-content w-16 rounded-full border-4 border-bg-error">
-                    <span class="text-xl">{{beneficiaryInfo.beneficiaryName.charAt(0)}}</span>
-                </div>
+                    <div class="bg-neutral text-neutral-content w-16 rounded-full border-4 border-bg-error">
+                        <span class="text-xl">{{beneficiaryInfo.beneficiaryName.charAt(0)}}</span>
+                        
+                            
+                       
+                    </div>
+                    <ng-icon name="iconoirWarningTriangle" color="red" class=""></ng-icon>
             }
             @else {
                 <div class="bg-neutral text-neutral-content w-16 rounded-full ">
