@@ -39,7 +39,7 @@ module.exports = {
         700: "#C1803D",
         900: "#AE6425",
       },
-      "bg-error": "#FD704B",
+      "bg-error": "#F5E2DF",
       error: "#BD371A",
       "bg-warning": "#FDB657",
       warning: "#B05B15",
