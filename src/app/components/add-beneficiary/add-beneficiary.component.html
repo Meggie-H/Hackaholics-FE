@@ -1,0 +1,15 @@
+<form
+  [formGroup]="beneficiaryFrom"
+  class="flex flex-col p-4"
+  (ngSubmit)="onSubmit()"
+>
+  <label for="beneficiaryId">Beneficiary id: </label>
+  <input id="beneficiaryId" type="text" formControlName="beneficiaryId" />
+  <label for="accountNumber">Account number: </label>
+  <input id="accountNumber" type="text" formControlName="accountNumber" />
+  <label for="bank">Bank: </label>
+  <input id="bank" type="text" formControlName="bank" />
+  <label for="beneficiaryName">Beneficiary Name: </label>
+  <input id="beneficiaryName" type="text" formControlName="beneficiaryName" />
+  <button type="submit">Submit</button>
+</form>
