@@ -1,21 +1,23 @@
 import { Component, Input } from '@angular/core';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { ionPeople } from '@ng-icons/ionicons';
 
 @Component({
   selector: 'app-pop-up',
   standalone: true,
-  imports: [],
+  imports: [NgIconComponent],
   templateUrl: './pop-up.component.html',
-  styleUrl: './pop-up.component.css'
+  styleUrl: './pop-up.component.css',
+  viewProviders: [provideIcons({ ionPeople })],
 })
 export class PopUpComponent {
   @Input() percentage = 70;
   @Input() numFlags = 4;
   colour = 'text-warning';
-  heading = "This company has been flagged as very unsafe";
-
+  heading = 'This company has been flagged as very unsafe';
 
   constructor() {
-    this.getColorClass()
+    this.getColorClass();
   }
 
   getColorClass() {
