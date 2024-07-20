@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@ng-icons/core": "^29.0.0",
+    "@ng-icons/iconoir": "^29.0.0",
     "@ng-icons/heroicons": "^29.0.0",
     "@ng-icons/ionicons": "^29.0.0",
     "@ng-icons/material-icons": "^29.0.0",

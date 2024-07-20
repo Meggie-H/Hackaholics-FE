@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IAccountBalanceResponse, IBeneficiariesDTO, ITransactionsResponse } from '../models/api-types';
 import { environment } from '../../environments/environment.development';
-import { ITransactionsResponse } from '../models/api-types';
 
 @Injectable({
   providedIn: 'root',
@@ -27,5 +27,9 @@ export class AccountService {
       bank: beneficiary.bank,
       beneficiaryName: beneficiary.beneficiaryName,
     }) as Observable<any>;
+  }
+
+  getBeneficiary() : Observable<IBeneficiariesDTO> {
+    return this.http.get(`${this.baseUrl}/beneficiaries`) as Observable<IBeneficiariesDTO>;
   }
 }

@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class TransactionPageComponent {
   $transactions = new Subscription();
   constructor(private AccService : AccountService) { 
-    this.$transactions = this.AccService.getTransactions("4675778129910189600000003").subscribe((data) => {
+    this.$transactions = this.AccService.getBeneficiary().subscribe((data) => {
       console.log(data);
     });
   }

@@ -1,0 +1,6 @@
+@if ((beneficiaries$ | async); as beneficiaries) {
+    @for (beneficiary of beneficiaries.data.result; track beneficiary.beneficiaryId) {
+        <app-beneficiaries-card [beneficiaryInfo]="beneficiary"></app-beneficiaries-card>
+    }
+
+}
